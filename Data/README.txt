@@ -1,4 +1,4 @@
-Data was retrieved from website below on March 27th, 2022.
+Data was retrieved from the website below on March 27th, 2022.
 GitHub and Git LFS does not allow for files over 2GBs.
 Please download the data from the Kaggle website.
 
