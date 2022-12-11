@@ -47,9 +47,9 @@ The random forest model was trained on all available data, on select variables t
 
 ### Conclusion and Next Steps
 
-This process did produce a viable model and demonstrated the usefulness of Random Forests. It was not able to highlight a few, key variables. The next steps to improve this model would be:
+This process did produce a viable model and demonstrated the usefulness of random forests for this problem. It was not able to highlight a few, key variables. The next steps to improve this model would be:
 
-- Allocate more resources so that the training can be done on the entire training dataset.
+- Allocate more resources so that the training can be done on the entire training dataset to exact key variables.
 - Subset the training dataset and rerun the models to allow for a standard cross validation procedure and allow tools that determine important input variables to be determined.
 - Incorporate ordinality information into the classification schema. 
 - Incorporate a time series analysis that capitalizes on the time nature of the data.
