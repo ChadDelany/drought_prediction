@@ -18,9 +18,30 @@ With increasing climate change and an overall increase in global temperature, th
 
 ### Analysis
 
-Several linear regression models were tried with the dataset and the drought score target variable.  None of these models produced high enough accuracy.  The problem was converted to a classification one and the drought score target variable was convert from a continuous variable to a distinct one.  Multiple classification models were tried.   The random forest model gave the most consistently accurate results.  The hyperparameters for the random forest were then tuned to increase the accuracy.  
+The dataset covered the time period from 2000 - 2020 with 18 daily meteorological variables, a weekly drought score, and 30 rudimentary soil variables for the 3,143 counties in the US.   The training data set contained approximately 2.3 million rows of data. Several linear regression models were tried with the dataset and the drought score target variable.  None of these models produced high enough accuracy.  The problem was converted to a classification one and the drought score target variable was convert from a continuous variable to an integer that corresponded with the original drought categories (see the [data dictionary](https://github.com/ChadDelany/drought_prediction/blob/main/notebooks/99_appendix_data_dictionary.ipynb) for more explanation).  Multiple classification models were tried.   The random forest model gave the most consistently accurate results.  The hyperparameters for the random forest were then tuned to increase the accuracy.  
 
 ### Results
+
+This is a comparison of the classification models' accuracy.
+
+| Model Metric         | ROC AUC | Total  Accuracy | Mean Accuracy  per Class | Accuracy per  Class STD |
+| -------------------- | ------- | --------------- | ------------------------ | ----------------------- |
+| Logistic  Regression | 0.844   | 60%             | 27%                      | 16%                     |
+| Nearest  Neighbor    | 1.472   | 68%             | 55%                      | 9%                      |
+| Random Forest        | 1.72    | 77%             | 75%                      | 5%                      |
+
+The random forest model was trained on all available data, on select variables to decrease the correlation between variables and then applied to the test dataset to verify the model.  The table below breaks down the accuracy of each model by each drought category.
+
+| Training: All Variables |           | Training: Select Variables |           | Test Set: All Variables |           |
+| ----------------------: | :-------: | -------------------------: | --------- | ----------------------: | --------: |
+|                   Class | Accuracy  |                      Class | Accuracy  |                   Class |  Accuracy |
+|                       0 |   78.8%   |                          0 | 70.3%     |                       0 |     76.1% |
+|                       1 |   73.5%   |                          1 | 61.5%     |                       1 |     17.2% |
+|                       2 |   68.9%   |                          2 | 58.9%     |                       2 |     14.6% |
+|                       3 |   68.7%   |                          3 | 59.1%     |                       3 |      4.8% |
+|                       4 |   74.3%   |                          4 | 66.2%     |                       4 |        0% |
+|                       5 |   83.7%   |                          5 | 76.2%     |                       5 |        0% |
+|               **Total** | **77.0%** |                  **Total** | **68.8%** |               **Total** | **73.7%** |
 
 
 
