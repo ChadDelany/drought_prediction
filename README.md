@@ -1,6 +1,6 @@
 ![Effects of drought on agriculture](https://github.com/ChadDelany/drought_prediction/blob/main/data/images/effect_of_drought_on_agriculture.jpg)
 
-# **Drought Prediction using Rudimentary Meteorologic & Soil Variables**
+# **Drought Prediction using Rudimentary Meteorological & Soil Variables**
 
 ## Data Science Project
 
