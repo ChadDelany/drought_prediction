@@ -8,7 +8,7 @@
 - For raw data, go to [data](https://github.com/ChadDelany/drought_prediction/tree/main/data).
 - For the full report, presentation slides, and initial project proposal, go to [reports](https://github.com/ChadDelany/drought_prediction/tree/main/reports).
 
-### Problem Statement
+### Problem Statement 
 
 The United States has an abundance of weather and soil data compared to other countries. Using basic weather and rudimentary soil data, can we accurately predict droughts in the United States? Can a model be developed that has an accuracy greater than 80% within the next two months? Can these results be generalized to other countries with less available data resources?
 
